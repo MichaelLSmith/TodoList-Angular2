@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { NgForm} from '@angular/common';
+import { NgForm } from '@angular/common';
 
 import { Todo } from './todo';
+
+
 
 @Component({
   selector: 'todo-form',
@@ -18,6 +20,6 @@ export class TodoFormComponent {
   onSubmit() {this.submitted = true; }
 
   //delete when finished
-  get diagnostic() { return JSON.stringify(this.model); }
+  get diagnostic() { return JSON.stringify(this.model);
 
 }

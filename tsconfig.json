@@ -3,7 +3,6 @@
     "target": "es5",
     "module": "commonjs",
     "moduleResolution": "node",
-    "mapRoot": "./js-maps",
     "outDir": "./compiled",
     "sourceMap": true,
     "emitDecoratorMetadata": true,

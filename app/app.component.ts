@@ -7,4 +7,5 @@ import { TodoFormComponent } from './todo-form.component';
   template: '<todo-form></todo-form>',
   directives: [TodoFormComponent]
 })
-export class AppComponent { }
+export class AppComponent {
+}

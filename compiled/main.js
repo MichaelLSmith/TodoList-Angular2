@@ -7,4 +7,4 @@ platform_browser_dynamic_1.bootstrap(app_component_1.AppComponent, [
     forms_1.provideForms()
 ])
     .catch(function (err) { return console.error(err); });
-//# sourceMappingURL=../app/js-maps/main.js.map
+//# sourceMappingURL=main.js.map

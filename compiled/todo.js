@@ -1,8 +1,12 @@
 "use strict";
 var Todo = (function () {
-    function Todo() {
+    function Todo(id, name, type, completed) {
+        this.id = id;
+        this.name = name;
+        this.type = type;
+        this.completed = completed;
     }
     return Todo;
 }());
 exports.Todo = Todo;
-//# sourceMappingURL=../app/js-maps/todo.js.map
+//# sourceMappingURL=todo.js.map

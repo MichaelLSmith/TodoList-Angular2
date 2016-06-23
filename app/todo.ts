@@ -4,5 +4,5 @@ export class Todo {
     public name: string,
     public type: string,
     public completed: boolean
-  )
+  ) {}
 }

@@ -1,17 +1,54 @@
 <section class="container">
-  <h1>To Do List</h1>
+  <h1 class="text-center">To Do List</h1>
+    <ul class="list-group">
 
-  <form>
-    <div class="row">
-      <div class="twelve columns">
-        <label for="exampleEmailInput">Your email</label>
-        <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
-      </div>
-    </div>
-    <label class="example-send-yourself-copy">
-      <input type="checkbox">
-      <span class="label-body">Send a copy to yourself</span>
-    </label>
-    <input class="button-primary" type="submit" value="Submit">
-  </form>
+      <li class="list-group-item">
+        <!--TODO #4:
+          Create a new todo using the text from the "add a todo"
+          input whenever the add button is clicked or the user
+          presses the Enter key.
+        -->
+        <form class="form-horizontal">
+          <section class="form-group">
+            <article class="input-group">
+              <span class="input-group-btn">
+                <button class="btn btn-primary" type="submit">Add</button>
+              </span>
+              <input type="text" class="form-control" required
+                [(ngModel)]="model.name" name="name">
+                print out
+                {{diagnostic}}
+                {{model.id}}
+              <!-- from input above placeholder="add a todo" -->
+            </article>
+          </section>
+              <!-- type selection to appear when typing -->
+              <section class="form-group">
+                <label for="types">Type Category</label>
+                <select class="form-control" required>
+                  <option *ngFor="let t of types" [value]="p">{{t}}</option>
+                </select>
+              </section>
+              <!-- type selection end -->
+        </form>
+      </li>
+      <!--TODO #1:
+        Repeat this list element for each todo in the controller's
+        list of todos
+      -->
+      <li class="list-group-item">
+
+        <!--TODO #3:
+          set the class of this label to "done" when the todo's
+          done property is true.
+        -->
+        <label >
+        <!--  -->
+          <!--TODO #2: Hook up this checkbox to a todo's done property-->
+          <input type="checkbox">
+          <!--TODO #2: Show the text for a todo here-->
+          Todo Text Here
+        </label>
+      </li>
+    </ul>
 </section>

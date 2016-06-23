@@ -19,7 +19,9 @@ var TodoFormComponent = (function () {
     TodoFormComponent.prototype.onSubmit = function () { this.submitted = true; };
     Object.defineProperty(TodoFormComponent.prototype, "diagnostic", {
         //delete when finished
-        get: function () { return JSON.stringify(this.model); },
+        get: function () {
+            return JSON.stringify(this.model);
+        },
         enumerable: true,
         configurable: true
     });
@@ -33,4 +35,4 @@ var TodoFormComponent = (function () {
     return TodoFormComponent;
 }());
 exports.TodoFormComponent = TodoFormComponent;
-//# sourceMappingURL=../app/js-maps/todo-form.component.js.map
+//# sourceMappingURL=todo-form.component.js.map
