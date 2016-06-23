@@ -9,19 +9,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var todo_form_component_1 = require('./todo-form.component');
-var AppComponent = (function () {
-    function AppComponent() {
+var todo_1 = require('./todo');
+var TodoFormComponent = (function () {
+    function TodoFormComponent() {
+        this.types = ['Personal', 'Work', 'Chore'];
+        this.model = new todo_1.Todo(1, 'Hair Cut', this.types[0], false);
+        this.submitted = false;
     }
-    AppComponent = __decorate([
+    TodoFormComponent.prototype.onSubmit = function () { this.submitted = true; };
+    Object.defineProperty(TodoFormComponent.prototype, "diagnostic", {
+        //delete when finished
+        get: function () { return JSON.stringify(this.model); },
+        enumerable: true,
+        configurable: true
+    });
+    TodoFormComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: '<todo-form></todo-form>',
-            directives: [todo_form_component_1.TodoFormComponent]
+            selector: 'todo-form',
+            templateUrl: 'app/html-templates/todo-form.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], TodoFormComponent);
+    return TodoFormComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=../app/js-maps/app.component.js.map
+exports.TodoFormComponent = TodoFormComponent;
+//# sourceMappingURL=../app/js-maps/todo-form.component.js.map

@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
+
+import { TodoFormComponent } from './todo-form.component';
+
 @Component({
   selector: 'my-app',
-  templateUrl: './app/html-templates/app.component.html'
+  template: '<todo-form></todo-form>',
+  directives: [TodoFormComponent]
 })
 export class AppComponent { }
