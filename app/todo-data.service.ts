@@ -13,8 +13,8 @@ export class TodoDataService {
         return todos;
     }
 
-    getTypes() {
-        return types;
+    getTodo() {
+        
     }
 
 //Read and Write from Todos[] in the ./todo-data.ts

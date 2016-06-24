@@ -16,8 +16,7 @@ var TodoDataService = (function () {
     TodoDataService.prototype.getTodos = function () {
         return todo_data_1.todos;
     };
-    TodoDataService.prototype.getTypes = function () {
-        return todo_data_1.types;
+    TodoDataService.prototype.getTodo = function () {
     };
     TodoDataService = __decorate([
         core_1.Injectable(), 

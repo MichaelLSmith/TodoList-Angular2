@@ -35,18 +35,17 @@
         Repeat this list element for each todo in the controller's
         list of todos
       -->
-      <li class="list-group-item">
+      <li class="list-group-item" *ngFor="let todo of todos">
 
         <!--TODO #3:
           set the class of this label to "done" when the todo's
           done property is true.
         -->
         <label >
-        <!--  -->
           <!--TODO #2: Hook up this checkbox to a todo's done property-->
           <input type="checkbox">
           <!--TODO #2: Show the text for a todo here-->
-          Todo Text Here
+          {{todo.name}}: {{todo.type}}
         </label>
       </li>
     </ul>
