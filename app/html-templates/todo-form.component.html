@@ -1,5 +1,6 @@
 <section class="container">
   <h1 class="text-center">To Do List</h1>
+                  {{diagnostic}}
     <ul class="list-group">
 
       <li class="list-group-item">
@@ -14,11 +15,9 @@
               <span class="input-group-btn">
                 <button class="btn btn-primary" type="submit">Add</button>
               </span>
-              <input type="text" class="form-control" required
-                [(ngModel)]="model.name" name="name">
-                print out
-                {{diagnostic}}
-                {{model.id}}
+              <input type="text" class="form-control" />
+               <!-- required
+                [(ngModel)]="model.name" name="name"> -->
               <!-- from input above placeholder="add a todo" -->
             </article>
           </section>

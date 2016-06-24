@@ -9,26 +9,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var todo_1 = require('./todo');
+var todo_data_1 = require('./todo-data');
+console.log(todo_data_1.types);
+//when user adds a new todo, it is added to the todos array in todo-data.ts
+//the todo-types array is displayed in the <select> option in the todo-form
 var TodoFormComponent = (function () {
     function TodoFormComponent() {
-        this.types = ['Personal', 'Work', 'Chore'];
-        this.model = new todo_1.Todo(1, 'Hair Cut', this.types[0], false);
+        this.types = todo_data_1.types;
+        // model = new Todo(1, 'Hair Cut', this.types[0], false);
+        // todos: any[] = [this.model, new Todo(2, 'Buy Milk', this.types[2], false)];
+        // newTodo()
         this.submitted = false;
     }
     TodoFormComponent.prototype.onSubmit = function () { this.submitted = true; };
     Object.defineProperty(TodoFormComponent.prototype, "diagnostic", {
         //delete when finished
-        get: function () {
-            return JSON.stringify(this.model);
-        },
+        get: function () { return JSON.stringify(this.types); },
         enumerable: true,
         configurable: true
     });
     TodoFormComponent = __decorate([
         core_1.Component({
             selector: 'todo-form',
-            templateUrl: 'app/html-templates/todo-form.component.html'
+            templateUrl: 'app/html-templates/todo-form.component.html',
         }), 
         __metadata('design:paramtypes', [])
     ], TodoFormComponent);
