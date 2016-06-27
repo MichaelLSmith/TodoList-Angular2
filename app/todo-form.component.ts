@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/common';
 
 import { TodoDataService } from './todo-data.service'
@@ -14,13 +14,15 @@ import { types } from './todo-data';
   templateUrl: 'app/html-templates/todo-form.component.html',
   providers: [TodoDataService]
 })
-export class TodoFormComponent {
+export class TodoFormComponent implements OnInit {
   types: string[] = types;
   todos: Todo[];
 
-  constructor(todoDataService: TodoDataService){
-    this.todos = todoDataService.getTodos();
-}
+  constructor(private todoDataService: TodoDataService){}
+
+  ngOnInit(){
+    this.todos = this.todoDataService.getTodos();
+  }
 
   // model = new Todo(1, 'Hair Cut', this.types[0], false);
 

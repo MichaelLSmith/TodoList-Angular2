@@ -15,12 +15,15 @@ var todo_data_1 = require('./todo-data');
 //the todo-types array is displayed in the <select> option in the todo-form
 var TodoFormComponent = (function () {
     function TodoFormComponent(todoDataService) {
+        this.todoDataService = todoDataService;
         this.types = todo_data_1.types;
         // model = new Todo(1, 'Hair Cut', this.types[0], false);
         // todos: any[] = [this.model, new Todo(2, 'Buy Milk', this.types[2], false)];
         this.submitted = false;
-        this.todos = todoDataService.getTodos();
     }
+    TodoFormComponent.prototype.ngOnInit = function () {
+        this.todos = this.todoDataService.getTodos();
+    };
     TodoFormComponent.prototype.onSubmit = function () { this.submitted = true; };
     Object.defineProperty(TodoFormComponent.prototype, "diagnostic", {
         //delete when finished

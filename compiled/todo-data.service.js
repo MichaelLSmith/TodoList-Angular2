@@ -16,7 +16,9 @@ var TodoDataService = (function () {
     TodoDataService.prototype.getTodos = function () {
         return todo_data_1.todos;
     };
-    TodoDataService.prototype.getTodo = function () {
+    TodoDataService.prototype.newTodo = function () {
+        //create new todo obj in the todos array
+        //creat new id value based on +1 from the last todo in the array
     };
     TodoDataService = __decorate([
         core_1.Injectable(), 
